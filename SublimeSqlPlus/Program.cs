@@ -61,7 +61,7 @@ namespace SublimeSqlWrapper {
             using (StreamWriter sw = _process.StandardInput) {
                 if (sw.BaseStream.CanWrite) {
                     foreach (var command in _commands) {
-                        sw.WriteLine(command);   
+                        sw.WriteLine(command);
                     }
                 }
             }
@@ -85,7 +85,7 @@ namespace SublimeSqlWrapper {
 
             //Store output results
             output = cmd.ExecuteCommands();
-            
+
             File.Delete(fileName);
 
             //Check for errors and run errors query
